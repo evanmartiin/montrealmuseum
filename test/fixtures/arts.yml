@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  author: MyString
+  year: 1
+  photo: MyString
+  district: one
+  category: one
+
+two:
+  title: MyString
+  description: MyText
+  author: MyString
+  year: 1
+  photo: MyString
+  district: two
+  category: two
