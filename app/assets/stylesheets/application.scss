@@ -38,14 +38,14 @@ body {
 
 #logoMTL {
   width: 20vw;
+  height: 20vh;
   margin-left: 5vw;
   display: flex;
   justify-content: center;
 }
 
 #logoMTL img {
-  height: 150px;
-  max-width: 100%;
+  object-fit: contain;
 }
 
 nav {
