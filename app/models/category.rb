@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :art
+  has_many :arts
 
   def to_s
     "#{category_name}"

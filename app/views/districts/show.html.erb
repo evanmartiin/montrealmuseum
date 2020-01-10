@@ -5,5 +5,25 @@
   <%= @district.district_name %>
 </p>
 
+<table class="table table-hover container">
+    <tbody>
+      <div class="card-columns mx-5">
+      <% @district.arts.each do |art| %>
+        <div class="card">
+          <img src="<%= art.photo %>" class="card-img-top img-fluid"/>
+          <div class="card-body">
+            <h4 class="card-title"><%= art.title %></h4>
+            <p class="card-subtitle"><%= art.description %></p>
+            <p class="card-info"><%= art.author %></p>
+            <p class="card-text"><%= art.year %></p>
+            <p class="card-text btn float-left"><%= art.district %></p>
+            <p class="card-text btn float-right"><%= art.category %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </tbody>
+  </table>
+
 <%= link_to 'Edit', edit_district_path(@district) %> |
 <%= link_to 'Back', districts_path %>

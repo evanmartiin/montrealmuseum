@@ -15,10 +15,10 @@
       </select>
     </div>
     <div class="checkbox">
-      <input id="check1" type="checkbox">
-      <label for="check1">Architecture</label>
-      <input id="check2" type="checkbox">
-      <label id="labelCheck2" for="check2">Oeuvre d'art</label>
+      <% @categories.each do |category| %>
+        <input id="category-<%= category.id %>" type="checkbox">
+        <label for="category-<%= category.id %>" style="margin: auto 20px;"><%= category.category_name %></label>
+      <% end %>
     </div>
     <div class="btnNav"><button class="btnSearch" type="submit">Rechercher</button></div>
   </form>
@@ -28,6 +28,7 @@
   </div>
 </nav>
 <div class="content">
+  <!--
   <table class="table table-hover container">
     <thead>
       <tr>
@@ -59,26 +60,31 @@
       <% end %>
     </tbody>
   </table>
-
-  </br>
-  </br>
+-->
+<header><h1>Découvrez Montréal...</h1></header>
 
   <table class="table table-hover container">
     <tbody>
-      <div class="card-deck container d-flex justify-content-center">
+      <div class="card-columns m-5">
       <% @arts.each do |art| %>
         <div class="card">
-          <img src="<%= art.photo %>" class="card-img-top img-fluid" width="200px"/>
+          <img src="<%= art.photo %>" class="card-img-top img-fluid"/>
           <div class="card-body">
             <h4 class="card-title"><%= art.title %></h4>
-            <p class="card-text"><%= art.description %></p>
-            <p class="card-text btn btn-primary float-right"><%= art.author %></p>
+            <p class="card-subtitle"><%= art.author %>, <%= art.year %></p>
+            <p class="card-info"><%= art.description %></p>
+            <p class="card-text btn float-left"><%= link_to art.district, art.district %></p>
+            <p class="card-text btn float-right"><%= link_to art.category, art.category %></p>
           </div>
         </div>
         <% end %>
       </div>
     </tbody>
   </table>
+
+  <footer>
+
+  </footer>
 </div>
 
 
