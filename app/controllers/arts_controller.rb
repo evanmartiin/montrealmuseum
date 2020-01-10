@@ -5,6 +5,8 @@ class ArtsController < ApplicationController
   # GET /arts.json
   def index
     @arts = Art.all
+    @districts = District.all
+    @categories = Category.all
   end
 
   # GET /arts/1
