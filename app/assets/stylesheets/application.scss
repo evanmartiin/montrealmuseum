@@ -36,6 +36,18 @@ body {
   font-family: 'Montreal Regular', sans-serif;
 }
 
+#logoMTL {
+  width: 20vw;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+#logoMTL img {
+  height: 150px;
+  max-width: 100%;
+}
+
 nav {
   background-color: #e61d2f;
   height: 100vh;
@@ -45,13 +57,6 @@ nav {
   z-index: 100;
   float: left;
   position: fixed;
-
-  #logoMTL {
-    width: 20vw;
-    margin-left: 5vw;
-    display: flex;
-    justify-content: center;
-  }
 
   hr {
     color: white;
@@ -169,6 +174,7 @@ nav {
 
 .content {
   width: 70vw;
+  min-height: 100vh;
   position: relative;
   top: 0;
   float: right;
