@@ -1,4 +1,4 @@
-<nav>
+<nav id="navDesktop">
   <a href="https://montrealmuseum.herokuapp.com"><div id="logoMTL"><img src="https://cdn.glitch.com/c7f5badd-d247-4704-915a-715fa4802159%2FTM_logo_Montreal_blanc%20web.png?v=1578566433721"/></div></a>
   <hr>
   <button id="backBtn" onclick="window.history.back()">< Retour</button>
@@ -13,7 +13,7 @@
         <div class="card">
           <img src="<%= art.photo %>" class="card-img-top img-fluid"/>
           <div class="card-body">
-            <h4 class="card-title"><%= art.title %></h4>
+            <button class="card-click" onclick="window.location.href='/arts/<%= art.id %>'"><h4 class="card-title"><%= art.title %></h4></button>
             <p class="card-subtitle"><%= art.author %>, <%= art.year %></p>
             <p class="card-info"><%= art.description %></p>
             <button class="card-click" onclick="window.location.href='/arts/<%= art.id %>/edit'"><p class="card-info card-modify">Modifier</p></button>

@@ -29,3 +29,58 @@ function searchDistrict() {
 function searchCategory(num) {
   window.location.href='/categories/' + num;
 }
+
+function resize() {
+  if (document.body.clientWidth >= 576) {
+    var x = document.getElementById('burgerMenu');
+    var y = document.getElementById('crossMenu');
+    var menu = document.getElementById('menu');
+    var u = document.getElementById('navMobile');
+    u.style.display = "none";
+    x.style.display = 'none';
+    y.style.display = 'none';
+    menu.style.display = 'none';
+    menu.style.top = '-100vh';
+  }
+  else if (document.body.clientWidth < 576) {
+    var x = document.getElementById('burgerMenu');
+    var y = document.getElementById('crossMenu');
+    var menu = document.getElementById('menu');
+    var u = document.getElementById('navMobile');
+    u.style.display = "block";
+    x.style.display = 'block';
+    y.style.display = 'none';
+    menu.style.display = 'none';
+    menu.style.top = '-100vh';
+  }
+}
+
+function burger() {
+  var x = document.getElementById('burgerMenu');
+  var y = document.getElementById('crossMenu');
+  x.style.display = 'none';
+  y.style.display = 'block';
+  var menu = document.getElementById('menu');
+  menu.style.display = "block";
+  menu.style.animation = 'menuE 1s ease';
+  menu.style.top = '0vh';
+  var u = document.getElementById('navMobile');
+  u.style.display = "block";
+  u.style.animation = 'menuE 1s ease';
+  u.style.top = '0vh';
+}
+
+function cross() {
+  var x = document.getElementById('burgerMenu');
+  var y = document.getElementById('crossMenu');
+  x.style.display = 'block';
+  y.style.display = 'none';
+  var menu = document.getElementById('menu');
+  menu.style.display = "block";
+  menu.style.animation = 'menuD 1s ease';
+  menu.style.top = '-100vh';
+  var u = document.getElementById('navMobile');
+  u.style.display = "block";
+  u.style.animation = 'menuD 1s ease';
+  u.style.top = '-100vh';
+}

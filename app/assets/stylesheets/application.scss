@@ -12,6 +12,9 @@
  */
  @import "bootstrap";
 
+
+/* POLICES */
+
 @font-face {
   font-family: 'Montreal Regular';
   font-style: normal;
@@ -27,6 +30,8 @@
   src: local('Montreal Bold'), asset-url('Montreal-Bold.woff') format('woff');
 }
 
+
+/* CONTENU */
 
 body {
   width: 100vw;
@@ -212,20 +217,26 @@ nav {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1470181942237-78ce33fec141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%
+  background-size: 100%;
 }
 
 header {
   width: 70vw;
-  height: 20vh;
+  height: 12vw;
   background-color: #e61d2f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.h1Mobile {
+  font-size: 5vw;
+  color: white;
+  font-family: 'Montreal Bold', arial, sans-serif;
+}
+
 h1 {
-  font-size: 5rem;
+  font-size: 5vw;
   color: white;
   font-family: 'Montreal Bold', arial, sans-serif;
 }
@@ -283,7 +294,7 @@ h1 {
 
 footer {
   width: 70vw;
-  height: 20vh;
+  height: 12vw;
   background-color: #e61d2f;
   color: white;
   display: flex;
@@ -328,8 +339,8 @@ footer {
 }
 
 #showDescription {
-  font-size: 3rem;
-  line-height: 60px;
+  font-size: 2rem;
+  line-height: 40px;
 }
 
 #showAuthor {
@@ -343,4 +354,388 @@ footer {
 
 #showDistrict {
   margin-top: 50px;
+}
+
+#burgerMenu {
+  display: none;
+}
+
+#crossMenu {
+  display: none;
+}
+
+
+/* DESIGN SMARTPHONE */
+
+@media screen and (max-width: 575px) {
+  body {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montreal Regular', sans-serif;
+  }
+
+  #logoMTL {
+    width: 90vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #logoMTL img {
+    object-fit: contain;
+  }
+
+  #navDesktop {
+    display: none;
+  }
+
+  #navMobile {
+    display: block;
+    background-color: #e61d2f;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    top: -100vh;
+    display: flex;
+    justify-content: center;
+
+    hr {
+      color: white;
+      text-align: center;
+      border: 4px solid white;
+      width: 20vw;
+      margin-top: 30px;
+    }
+
+    #searchForm {
+      margin: 100px 30px 50px 30px;
+    }
+
+    #search {
+      color: grey;
+    }
+
+    .form-group {
+      margin: 30px auto;
+    }
+
+    h2 {
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #district {
+      margin-bottom: 30px;
+    }
+
+    .separator {
+      margin: 5vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .separator::before, .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 4px solid white;
+        margin-bottom: 20px;
+    }
+    .separator::before {
+        margin-right: 1em;
+    }
+    .separator::after {
+        margin-left: 1em;
+    }
+
+    #searchForm button {
+      background-color: white;
+      margin: 20px auto;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      color: grey;
+    }
+
+    .checkbox {
+      display: flex;
+      justify-content: center;
+    }
+
+    .checkbox input {
+      margin: auto 5px;
+      width: 20px;
+      display: none;
+    }
+
+    #labelCheck2 {
+      margin-left: 60px;
+    }
+
+    label {
+      display: block;
+      position: relative;
+      padding: 15px 30px 15px 62px;
+      border-radius: 100px;
+      color: grey;
+      background-color: white;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color .2s, font-size .2s;
+      font-size: 0.9rem;
+    }
+
+    label::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      width: 32px;
+      border: 3px solid grey;
+      border-radius: 100px;
+      transition: background-color .2s;
+    }
+
+    input:hover + label {
+      font-size: 1rem;
+    }
+
+    input:hover + label::before {
+      background-color: grey;
+    }
+
+    .btnSearch {
+      border: none;
+      text-align: center;
+      background-color: white;
+      padding: 10px 20px;
+      color: grey;
+      border-radius: 100px;
+      transition: transform .2s ease;
+    }
+    .btnSearch:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn {
+    background-color: #e61d2f;
+    transition: .2s ease;
+    font-size: 0.8rem;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  .btn a {
+    text-decoration: none;
+    color: white;
+    transition: .2s ease
+  }
+
+  .content {
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 20vw;
+    position: relative;
+    top: 0;
+    float: right;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1470181942237-78ce33fec141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  header {
+    width: 100vw;
+    height: 20vw;
+    background-color: #e61d2f;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  #burgerMenu {
+    display: block;
+    width: 20vw;
+    position: absolute;
+    right: 5vw;
+  }
+
+  #crossMenu {
+    display: none;
+    width: 13vw;
+    position: absolute;
+    right: 8.5vw;
+  }
+
+  #menu {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #e61d2f;
+    top: -100vh;
+    left: 0;
+    z-index: -100;
+  }
+  @keyframes menuE {
+    0% {
+      top: -100vh;
+    }
+    100% {
+      top: 0vh;
+    }
+  }
+  @keyframes menuD {
+    0% {
+      top: 0vh;
+    }
+    100% {
+      top: -100vh;
+    }
+  }
+
+  .h1Mobile {
+    font-size: 5vw;
+    color: white;
+    position: absolute;
+    left: 10vw;
+    top: 6vw;
+    font-family: 'Montreal Bold', arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 5vw;
+    color: white;
+    font-family: 'Montreal Bold', arial, sans-serif;
+  }
+
+  .card-title {
+    font-family: 'Montreal Bold', arial, sans-serif;
+    margin-bottom: 5px;
+    transition: .2s ease;
+  }
+  .card-title:hover {
+    transform: scale(1.05);
+  }
+
+  .card-subtitle {
+    color: grey;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .card-click {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: white;
+  }
+
+  .card-modify {
+    color: grey;
+    background-color: white;
+    transition: .2s ease;
+  }
+  .card-modify:hover {
+    color: #e61d2f;
+  }
+
+  .card-text {
+    color: white;
+  }
+  .card-text:hover {
+    color: white;
+  }
+
+  .btnNav {
+    display: flex;
+    justify-content: center;
+    width: calc(30vw - 60px);
+  }
+
+  .btnAdd {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100vw;
+  }
+
+  footer {
+    width: 100vw;
+    height: 20vw;
+    background-color: #e61d2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+  }
+
+  #instaLogo {
+    width: 50px;
+    transition: .2s ease;
+  }
+  #instaLogo:hover {
+    transform: scale(1.1);
+  }
+
+  #linkedinLogo {
+    width: 25px;
+    transition: .2s ease;
+  }
+  #linkedinLogo:hover {
+    transform: scale(1.1);
+  }
+
+  #backBtn {
+    background-color: white;
+    color: grey;
+    border: none;
+    width: 8vw;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 11vw;
+    margin-top: 30vh;
+    transition: .2s ease;
+  }
+  #backBtn:hover {
+    transform: scale(1.1);
+  }
+
+  #form {
+    padding: 50px;
+  }
+
+  #showDescription {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  #showAuthor {
+    font-style: italic;
+    color: grey;
+  }
+
+  #showPhoto {
+    width: 80vw;
+  }
+
+  #showDistrict {
+    margin-top: 50px;
+  }
 }
