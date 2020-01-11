@@ -31,7 +31,7 @@ function searchCategory(num) {
 }
 
 function resize() {
-  if (document.body.clientWidth >= 576) {
+  if (document.body.clientWidth >= 1100) {
     var x = document.getElementById('burgerMenu');
     var y = document.getElementById('crossMenu');
     var menu = document.getElementById('menu');
@@ -42,7 +42,7 @@ function resize() {
     menu.style.display = 'none';
     menu.style.top = '-100vh';
   }
-  else if (document.body.clientWidth < 576) {
+  else if (document.body.clientWidth < 1100) {
     var x = document.getElementById('burgerMenu');
     var y = document.getElementById('crossMenu');
     var menu = document.getElementById('menu');
