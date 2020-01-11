@@ -203,6 +203,10 @@ h1 {
 .card-title {
   font-family: 'Montreal Bold', arial, sans-serif;
   margin-bottom: 5px;
+  transition: .2s ease;
+}
+.card-title:hover {
+  transform: scale(1.05);
 }
 
 .card-subtitle {

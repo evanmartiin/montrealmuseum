@@ -34,7 +34,7 @@
         <div class="card">
           <img src="<%= art.photo %>" class="card-img-top img-fluid"/>
           <div class="card-body">
-            <h4 class="card-title"><%= art.title %></h4>
+            <button class="card-click" onclick="window.location.href='/arts/<%= art.id %>'"><h4 class="card-title"><%= art.title %></h4></button>
             <p class="card-subtitle"><%= art.author %>, <%= art.year %></p>
             <p class="card-info"><%= art.description %></p>
             <button class="card-click" onclick="window.location.href='/arts/<%= art.id %>/edit'"><p class="card-info card-modify">Modifier</p></button>
