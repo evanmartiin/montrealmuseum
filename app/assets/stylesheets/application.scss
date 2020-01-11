@@ -67,7 +67,7 @@ nav {
     margin-top: 30px;
   }
 
-  form {
+  #searchForm {
     margin: 100px 30px;
   }
 
@@ -79,7 +79,37 @@ nav {
     margin: 30px auto;
   }
 
-  form button {
+  h2 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #district {
+    margin-bottom: 30px;
+  }
+
+  .separator {
+    margin: 5vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .separator::before, .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 4px solid white;
+      margin-bottom: 20px;
+  }
+  .separator::before {
+      margin-right: 1em;
+  }
+  .separator::after {
+      margin-left: 1em;
+  }
+
+  #searchForm button {
     background-color: white;
     margin: 20px auto;
   }
@@ -135,11 +165,11 @@ nav {
     transition: background-color .2s;
   }
 
-  input:checked + label {
+  input:hover + label {
     font-size: 1rem;
   }
 
-  input:checked + label::before {
+  input:hover + label::before {
     background-color: grey;
   }
 
@@ -247,7 +277,7 @@ h1 {
 .btnAdd {
   display: flex;
   justify-content: space-around;
-  margin-top: 200px;
+  margin-top: 50px;
   width: 30vw;
 }
 
@@ -299,6 +329,7 @@ footer {
 
 #showDescription {
   font-size: 3rem;
+  line-height: 60px;
 }
 
 #showAuthor {

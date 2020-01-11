@@ -17,3 +17,15 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+function searchDistrict() {
+  var x = document.getElementById("district");
+  var district = x.options[x.selectedIndex].value;
+  if (district != 0) {
+    window.location.href='/districts/' + district;
+  }
+}
+
+function searchCategory(num) {
+  window.location.href='/categories/' + num;
+}
