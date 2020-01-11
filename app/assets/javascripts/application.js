@@ -30,7 +30,7 @@ function searchCategory(num) {
   window.location.href='/categories/' + num;
 }
 
-function resize() {
+window.setInterval(function(){
   if (document.body.clientWidth >= 1100) {
     var x = document.getElementById('burgerMenu');
     var y = document.getElementById('crossMenu');
@@ -53,7 +53,7 @@ function resize() {
     menu.style.display = 'none';
     menu.style.top = '-100vh';
   }
-}
+}, 500);
 
 function burger() {
   var x = document.getElementById('burgerMenu');
