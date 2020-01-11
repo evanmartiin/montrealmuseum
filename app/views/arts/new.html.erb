@@ -1,5 +1,17 @@
-<h1>New Art</h1>
+<nav>
+  <div id="logoMTL"><img src="https://cdn.glitch.com/c7f5badd-d247-4704-915a-715fa4802159%2FTM_logo_Montreal_blanc%20web.png?v=1578566433721"/></div>
+  <hr>
+  <button id="backBtn" onclick="window.history.back()">< Retour</button>
+</nav>
+<div class="content">
+  <header><h1>Ajouter art</h1></header>
 
-<%= render 'form', art: @art %>
+  <div id="form"><%= render 'form', art: @art %></div>
 
-<%= link_to 'Back', arts_path %>
+  <footer>
+    Evan Martin, 2020.
+    </br>
+    <a target="_blank" href="https://www.instagram.com/evanmartiin/"><img id="instaLogo" src="http://www.llumac.cat/iconpics/f/25/250393/instagram-logo-png.png"></a>
+    <a target="_blank" href="https://www.linkedin.com/in/evan-martin-925805194/"><img id="linkedinLogo" src="https://cdn.glitch.com/c7f5badd-d247-4704-915a-715fa4802159%2Flogo_linkedin.png?v=1578761028416"></a>
+  </footer>
+</div>

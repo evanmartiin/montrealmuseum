@@ -1,4 +1,3 @@
-<!--<h1 class="titleMain">Montréal</h1>-->
 <nav>
   <div id="logoMTL"><img src="https://cdn.glitch.com/c7f5badd-d247-4704-915a-715fa4802159%2FTM_logo_Montreal_blanc%20web.png?v=1578566433721"/></div>
   <hr>
@@ -24,45 +23,10 @@
   </form>
   <div class="btnAdd">
     <button class="btnSearch" onclick="window.location.href='/arts/new'">Ajouter art</button>
-    <button class="btnSearch" onclick="window.location.href='/districts/new'">Ajouter quartier</button>
   </div>
 </nav>
 <div class="content">
-  <!--
-  <table class="table table-hover container">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Author</th>
-        <th>Year</th>
-        <th>Photo</th>
-        <th>Quartier</th>
-        <th>Catégorie</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @arts.each do |art| %>
-        <tr>
-          <td><%= art.title %></td>
-          <td><%= art.description %></td>
-          <td><%= art.author %></td>
-          <td><%= art.year %></td>
-          <td><img src="<%= art.photo %>" width="200px"/></td>
-          <td><%= art.district %></td>
-          <td><%= art.category %></td>
-          <td><%= link_to 'Show', art %></td>
-          <td><%= link_to 'Edit', edit_art_path(art) %></td>
-          <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
--->
-<header><h1>Découvrez Montréal...</h1></header>
-
+  <header><h1>Découvrez Montréal...</h1></header>
   <table class="table table-hover container">
     <tbody>
       <div class="card-columns m-5">
@@ -73,8 +37,10 @@
             <h4 class="card-title"><%= art.title %></h4>
             <p class="card-subtitle"><%= art.author %>, <%= art.year %></p>
             <p class="card-info"><%= art.description %></p>
-            <p class="card-text btn float-left"><%= link_to art.district, art.district %></p>
-            <p class="card-text btn float-right"><%= link_to art.category, art.category %></p>
+            <button class="card-click" onclick="window.location.href='/arts/<%= art.id %>/edit'"><p class="card-info card-modify">Modifier</p></button>
+            </br>
+            <button class="card-click" onclick="window.location.href='/districts/<%= art.district.id %>'"><p class="card-text btn float-left"><%= art.district %></p></button>
+            <button class="card-click float-right" onclick="window.location.href='/categories/<%= art.category.id %>'"><p class="card-text btn float-right"><%= art.category %></p></button>
           </div>
         </div>
         <% end %>
@@ -83,7 +49,10 @@
   </table>
 
   <footer>
-
+    Evan Martin, 2020.
+    </br>
+    <a target="_blank" href="https://www.instagram.com/evanmartiin/"><img id="instaLogo" src="http://www.llumac.cat/iconpics/f/25/250393/instagram-logo-png.png"></a>
+    <a target="_blank" href="https://www.linkedin.com/in/evan-martin-925805194/"><img id="linkedinLogo" src="https://cdn.glitch.com/c7f5badd-d247-4704-915a-715fa4802159%2Flogo_linkedin.png?v=1578761028416"></a>
   </footer>
 </div>
 

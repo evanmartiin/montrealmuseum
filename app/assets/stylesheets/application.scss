@@ -211,6 +211,29 @@ h1 {
   margin-bottom: 10px;
 }
 
+.card-click {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: white;
+}
+
+.card-modify {
+  color: grey;
+  background-color: white;
+  transition: .2s ease;
+}
+.card-modify:hover {
+  color: #e61d2f;
+}
+
+.card-text {
+  color: white;
+}
+.card-text:hover {
+  color: white;
+}
+
 .btnNav {
   display: flex;
   justify-content: center;
@@ -228,4 +251,61 @@ footer {
   width: 70vw;
   height: 20vh;
   background-color: #e61d2f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+
+#instaLogo {
+  width: 50px;
+  transition: .2s ease;
+}
+#instaLogo:hover {
+  transform: scale(1.1);
+}
+
+#linkedinLogo {
+  width: 25px;
+  transition: .2s ease;
+}
+#linkedinLogo:hover {
+  transform: scale(1.1);
+}
+
+#backBtn {
+  background-color: white;
+  color: grey;
+  border: none;
+  width: 8vw;
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 11vw;
+  margin-top: 30vh;
+  transition: .2s ease;
+}
+#backBtn:hover {
+  transform: scale(1.1);
+}
+
+#form {
+  padding: 50px;
+}
+
+#showDescription {
+  font-size: 3rem;
+}
+
+#showAuthor {
+  font-style: italic;
+  color: grey;
+}
+
+#showPhoto {
+  width: 30vw;
+}
+
+#showDistrict {
+  margin-top: 50px;
 }

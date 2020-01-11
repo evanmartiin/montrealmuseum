@@ -6,5 +6,7 @@
   <%= f.input :photo %>
   <%= f.association :category %>
   <%= f.association :district %>
+  </br>
   <%= f.button :submit %>
+  <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
