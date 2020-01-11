@@ -30,6 +30,8 @@ function searchCategory(num) {
   window.location.href='/categories/' + num;
 }
 
+var menuVerif = 0;
+
 window.setInterval(function(){
   if (document.body.clientWidth >= 1100) {
     var x = document.getElementById('burgerMenu');
@@ -42,7 +44,7 @@ window.setInterval(function(){
     menu.style.display = 'none';
     menu.style.top = '-100vh';
   }
-  else if (document.body.clientWidth < 1100) {
+  else if (document.body.clientWidth < 1100 && menuVerif == 0) {
     var x = document.getElementById('burgerMenu');
     var y = document.getElementById('crossMenu');
     var menu = document.getElementById('menu');
@@ -53,9 +55,10 @@ window.setInterval(function(){
     menu.style.display = 'none';
     menu.style.top = '-100vh';
   }
-}, 500);
+}, 5000);
 
 function burger() {
+  menuVerif = 1;
   var x = document.getElementById('burgerMenu');
   var y = document.getElementById('crossMenu');
   x.style.display = 'none';
@@ -71,6 +74,7 @@ function burger() {
 }
 
 function cross() {
+  menuVerif = 0;
   var x = document.getElementById('burgerMenu');
   var y = document.getElementById('crossMenu');
   x.style.display = 'block';
